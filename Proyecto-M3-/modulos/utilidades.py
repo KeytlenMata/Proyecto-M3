@@ -8,10 +8,6 @@ def saludar():
 def despedida():
     print("Nos vemos mañana!")
 
-
-saludar()
-despedida()
-
 # ==========================
 # Funciones añadidas por Edgarcia09
 # ==========================
