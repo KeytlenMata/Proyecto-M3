@@ -9,7 +9,7 @@ def menuPrincipal():
         print("GRUPO A")
 
         utilidades.saludar()
-        print(f"Hoy es: {utilidades.obtener_fecha_actual()}" )
+        print(f"Hoy es: {utilidades.obtener_fecha_actual()}")
 
         print("\nMENÚ DE OPCIONES")
         print("1. Cuento")
@@ -22,8 +22,17 @@ def menuPrincipal():
             case "1":
                 cuento.imprimir_cuento()
             case "2":
-                matematicas.suma()
-                matematicas.factorial()
+                a = float(input("Ingresa el primer número: "))
+                b = float(input("Ingresa el segundo número: "))
+                resultado_suma = matematicas.sumar(a, b)
+                print(f"La suma de {a} + {b} es: {resultado_suma}")
+
+                n = int(input("Ingresa un número entero no negativo para calcular su factorial: "))
+                try:
+                    resultado_factorial = matematicas.factorial(n)
+                    print(f"El factorial de {n} es: {resultado_factorial}")
+                except ValueError as e:
+                    print(f"Error: {e}")
             case "3":
                 utilidades.despedida()
                 utilidades.pausar_programa()
